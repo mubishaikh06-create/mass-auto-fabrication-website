@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MASS Auto & Fabrication | Worli Mumbai</title>
+  <meta name="description" content="Car & motorcycle service & repair, welding & fabrication, ladders, house structure design, machine repair. Pickup & drop available. Worli, Mumbai." />
+  <style>
+    body{font-family:system-ui,Arial;max-width:980px;margin:0 auto;padding:20px;line-height:1.6}
+    header{padding:18px 16px;border:1px solid #e6e6e6;border-radius:14px}
+    h1{margin:0 0 6px}
+    .muted{color:#555}
+    .btns a{display:inline-block;margin:8px 10px 0 0;padding:10px 12px;border-radius:10px;border:1px solid #ddd;text-decoration:none}
+    .btns a:hover{border-color:#999}
+    section{margin-top:18px;padding:14px 16px;border:1px solid #eee;border-radius:14px}
+    ul{margin:8px 0 0}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 id="bizName">MASS Auto & Fabrication</h1>
+  <div class="muted">
+    📍 <span id="bizAddress">Worli Hill Road, Mumbai – 400018</span><br>
+    📞 <a id="callLink" href="tel:+919321897179">9321897179</a><br>
+    📧 <a id="emailLink" href="mailto:mubishaikh06@gmail.com">mubishaikh06@gmail.com</a><br>
+    🚚 Pickup & Drop: <strong id="pickupDrop">Yes</strong>
+  </div>
+
+  <div class="btns">
+    <a id="waLink" href="https://wa.me/919321897179?text=Hi%20MASS%20Auto%20%26%20Fabrication,%20I%20need%20service%2Frepair%2Ffabrication.%20My%20location%20is%20____.%20Please%20call%20me." target="_blank" rel="noopener">WhatsApp Now</a>
+    <a id="mapLink" href="https://share.google/Dzv2wjzSjC8Di6XzM" target="_blank" rel="noopener">Open Google Map</a>
+    <a href="#" onclick="shareSite();return false;">Share Business</a>
+  </div>
+</header>
+
+<section>
+  <h2>Services</h2>
+  <ul id="servicesList">
+    <li>Car & Motorcycle Repair</li>
+    <li>Full Car & Bike Service</li>
+    <li>Welding & Fabrication</li>
+    <li>Full Ladder for Home</li>
+    <li>Full House Structure Design</li>
+    <li>Machine Repair</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Work Photos</h2>
+  <p class="muted">You can add photos later from the Admin Panel.</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p class="muted">
+    Call/WhatsApp: <strong>9321897179</strong><br>
+    Email: <strong>mubishaikh06@gmail.com</strong><br>
+    Address: <strong>Worli Hill Road, Mumbai – 400018</strong>
+  </p>
+</section>
+
+<script>
+  function shareSite(){
+    const url = window.location.href;
+    const text = "MASS Auto & Fabrication - Worli, Mumbai. Car/Bike Service + Welding/Fabrication. " + url;
+    if(navigator.share){
+      navigator.share({title:"MASS Auto & Fabrication", text, url});
+    }else{
+      navigator.clipboard.writeText(text).then(()=>alert("Share text copied! Paste on WhatsApp."), ()=>alert(text));
+    }
+  }
+</script>
+
+</body>
+</html>
